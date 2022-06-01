@@ -129,7 +129,7 @@ App|Description
 
 ![IMAGE ALT TEXT](data/wiring_diagram.png)
 
-The code in the [main_functions.cpp](tflmicro/examples/peron_detection/main_functions.cpp) edited by initializing PIN 15 as OUTPUT and controlling the LED ON and OFF depending on the person detection  score. snipet of the edited code is shown below. 
+The code in the [main_functions.cpp](tflmicro/examples/person_detection/main_functions.cpp) edited by initializing PIN 15 as OUTPUT and controlling the LED ON and OFF depending on the person detection  score. snipet of the edited code is shown below. 
 
 ![IMAGE ALT TEXT](data/LED_Code.PNG)
 
