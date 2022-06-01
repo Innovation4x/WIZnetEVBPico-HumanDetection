@@ -117,10 +117,9 @@ Then you will creat some files under RPI-Pico-Cam/tflmicro/build/examples/person
 Bin|Description
 ---|---
 [person_detection_int8.uf2](tflmicro/bin/person_detection_int8.uf2) | This is the main program of person_detection, which can be dragged onto the RP2040 USB Mass Storage Device.
-[person_detection_benchmark.uf2](tflmicro/bin/person_detection_benchmark.uf2) | This is the benchmark program of person_detection, you can use it to test the performance of person_detection on pico.
-[image_provider_benchmark.uf2](tflmicro/bin/image_provider_benchmark.uf2) | This is the benchmark program of image_provider, you can use it to test the performance of image data acquisition.
-**Tips: If you don't want to compile, you can use the above pre-built uf2 file, you only need to wire the hardware and download uf2 to the device.**
-
+ 
+ The code in the [main_functions.cpp](tflmicro/examples/peron_detection/main_functions.cpp) edited by initializing PIN 15 as OUTPUT and controlling the LED ON and OFF depending on the person detection  score. snipet of the edited code is shown below. 
+![IMAGE ALT TEXT](data/LED_Code.png)
 ![IMAGE ALT TEXT](data/tflmicro_output.png)
 
 ### Test Person Detection
