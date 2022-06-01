@@ -1,15 +1,12 @@
-# PICO Arducam Examples
+# Wiznet PICO Arducam Examples
 
 Table of contents
 =================
-[Table of contents](#table-of-contents)
 * [Getting Started](#Getting-Started)
 * [Quick Pico Setup](#Quick-Pico-Setup)
-
 * [Person Detection](#Person-Detection)
    * [Download and Build](#Person-Detection)
    * [Test Person Detection](#Test-Person-Detection)
-
 
 # Getting started
 
