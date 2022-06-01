@@ -130,7 +130,8 @@ App|Description
 ![IMAGE ALT TEXT](data/wiring_diagram.png)
 
 The code in the [main_functions.cpp](tflmicro/examples/person_detection/main_functions.cpp) edited by initializing PIN 15 as OUTPUT and controlling the LED ON and OFF depending on the person detection  score. snipet of the edited code is shown below. 
-This output obtained in the pin is digital values and can be used for other purposes also.Triggering application wake other microcontrollers.  
+
+This output obtained in the pin is digital values and can be used for other purposes also.Triggering other microcontrollers for some other applications.  
 
 ![IMAGE ALT TEXT](data/LED_Code.PNG)
 
