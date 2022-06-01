@@ -119,7 +119,7 @@ Bin|Description
 [person_detection_int8.uf2](tflmicro/bin/person_detection_int8.uf2) | This is the main program of person_detection, which can be dragged onto the RP2040 USB Mass Storage Device.
  
  The code in the [main_functions.cpp](tflmicro/examples/peron_detection/main_functions.cpp) edited by initializing PIN 15 as OUTPUT and controlling the LED ON and OFF depending on the person detection  score. snipet of the edited code is shown below. 
-![IMAGE ALT TEXT](data/LED_Code.png)
+![IMAGE ALT TEXT](data/LED_Code.PNG)
 ![IMAGE ALT TEXT](data/tflmicro_output.png)
 
 ### Test Person Detection
