@@ -173,7 +173,4 @@ minicom -b 115200 -o -D /dev/ttyACM0
 
 The person detection example also outputs the image data and person detection results to the UART, and we provide [a processing program](tflmicro/person_detection_display/person_detection_display.pde) to display them:
 
-![no-person](data/no-person.png)
-![person](data/person.png)
-
 Changes are made in the peroson detection code to turn ON and OFF the LED. The LED pin in connected to 15th GPIO pin on the wiznet pico board. When the score of the preson detection is above 75% the LED will turn On or it will be OFF.
