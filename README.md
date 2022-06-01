@@ -169,7 +169,6 @@ The person detection example outputs some information through usb, you can use m
 ```bash
 minicom -b 115200 -o -D /dev/ttyACM0
 ```
-![minicom_output](data/minicom_output.png)
 
 The person detection example also outputs the image data and person detection results to the UART, and we provide [a processing program](tflmicro/person_detection_display/person_detection_display.pde) to display them:
 
