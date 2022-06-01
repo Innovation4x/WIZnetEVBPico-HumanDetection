@@ -40,7 +40,7 @@ sudo reboot
 ```
 
 ### Get Arducam Example
-- Download RPI-Pico-Cam example for person detection  
+- Download RPI-Pico-Cam example for video streaming
 ```bash 
 git clone https://github.com/ArduCAM/RPI-Pico-Cam.git
 ```
@@ -96,10 +96,10 @@ sudo cp arducam_demo.uf2 /mnt/pico
 sudo sync
 ```
 
-## Person Detection
+## Person Detection with LED ON and OFF based on person detection score
 - Download RPI-Pico-Cam
 ```bash 
-git clone https://github.com/ArduCAM/RPI-Pico-Cam.git
+git clone https://github.com/Innovation4x/WIZnetIoT.git
 ```
 - Compile 
 ```bash
