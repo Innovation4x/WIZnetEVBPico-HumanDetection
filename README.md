@@ -131,7 +131,7 @@ App|Description
 
 - Hardware connection 
 
-![IMAGE ALT TEXT](data/wiring diagram.png)
+![IMAGE ALT TEXT](data/wiring_diagram.png)
 
 - Load and run person_detection 
 The simplest method to load software onto a RP2040-based board is by mounting it as a USB Mass Storage Device.
