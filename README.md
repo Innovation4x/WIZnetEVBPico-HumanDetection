@@ -6,14 +6,11 @@ Table of contents
    * [Table of contents](#table-of-contents)
    * [Getting Started](#Getting-Started)
    * [Quick Pico Setup](#Quick-Pico-Setup)
-   * [Arducam Demo](#Get-Arducam)
-      * [Download and Build](#Get-Arducam)
-      * [Test Arducam demo](#Test-Arducam-demo)
+
    * [Person Detection](#Person-Detection)
       * [Download and Build](#Person-Detection)
       * [Test Person Detection](#Test-Person-Detection)
-        * [View output](#View-output)
-      * [Person Detection Diagram](#Person-Detection-Diagram)
+
 
 # Getting started
 
@@ -88,7 +85,6 @@ The simplest method to load software onto a RP2040-based board is by mounting it
 Doing this allows you to drag a file onto the board to program the flash. Go ahead and connect the Raspberry Pi Pico to
 your Raspberry Pi using a micro-USB cable, making sure that you hold down the BOOTSEL button to force it into
 USB Mass Storage Mode.
-![IMAGE ALT TEXT](data/4.png)
 
 If you are logged in via ssh for example, you may have to mount the mass storage device manually:
 ```bash
@@ -148,7 +144,6 @@ The simplest method to load software onto a RP2040-based board is by mounting it
 Doing this allows you to drag a file onto the board to program the flash. Go ahead and connect the Raspberry Pi Pico to
 your Raspberry Pi using a micro-USB cable, making sure that you hold down the BOOTSEL button to force it into
 USB Mass Storage Mode.
-![IMAGE ALT TEXT](data/4.png)
 
 If you are logged in via ssh for example, you may have to mount the mass storage device manually:
 ```bash
@@ -181,85 +176,4 @@ The person detection example also outputs the image data and person detection re
 ![no-person](data/no-person.png)
 ![person](data/person.png)
 
-**Tips: You can download the Processing [here](https://processing.org/download/) or [Processing for Pi](https://pi.processing.org/download/).**
-
-
-### Person Detection Diagram
-![Person Detection Diagram](data/diagram.png)
-
-
-## Person Detection Screen
-- Download RPI-Pico-Cam
-```bash 
-git clone https://github.com/ArduCAM/RPI-Pico-Cam.git
-```
-- Compile
-```bash
-cd RPI-Pico-Cam/tflmicro
-mkdir build 
-cd build 
-cmake ..
-```
-![IMAGE ALT TEXT](data/tflmicro_cmake_output.png)
-```bash
-make
-```
-![IMAGE ALT TEXT](data/tflmicro_make_output.png)  
-Then you will creat some files under RPI-Pico-Cam/tflmicro/build/examples/person_detection_screen path
-
-Bin|Description
----|---
-[person_detection_screen_int8.uf2](tflmicro/bin/person_detection_screen_int8.uf2) | This is the main program of person_detection_screen, which can be dragged onto the RP2040 USB Mass Storage Device.
-
-**Tips: If you don't want to compile, you can use the above pre-built uf2 file, you only need to wire the hardware and download uf2 to the device.**
-
-![IMAGE ALT TEXT](data/tflmicro_output_screen.png)
-
-### Test Person Detection Screen
-
-App|Description
----|---
-[person_detection_screen_int8](tflmicro/examples/person_detection_screen/main_functions.cpp) | This is a person detection screen demo.
-
-- Hardware requirements
-
-![IMAGE ALT TEXT](data/Pico4ML.png)
-
-Learn more here: [pico4ml-an-rp2040-based-platform-for-tiny-machine-learning](https://www.arducam.com/pico4ml-an-rp2040-based-platform-for-tiny-machine-learning/)
-
-- Load and run person_detection_screen
-  The simplest method to load software onto a RP2040-based board is by mounting it as a USB Mass Storage Device.
-  Doing this allows you to drag a file onto the board to program the flash. Go ahead and connect the Raspberry Pi Pico to
-  your Raspberry Pi using a micro-USB cable, making sure that you hold down the BOOTSEL button to force it into
-  USB Mass Storage Mode.
-  ![IMAGE ALT TEXT](data/4.png)
-
-If you are logged in via ssh for example, you may have to mount the mass storage device manually:
-```bash
-$ dmesg | tail
-[ 371.973555] sd 0:0:0:0: [sda] Attached SCSI removable disk
-$ sudo mkdir -p /mnt/pico
-$ sudo mount /dev/sda1 /mnt/pico
-```
-If you can see files in /mnt/pico then the USB Mass Storage Device has been mounted correctly:
-```bash
-$ ls /mnt/pico/
-INDEX.HTM INFO_UF2.TXT
-```
-Copy your person_detection_screen_int8.uf2 onto RP2040:
-```bash
-sudo cp examples/person_detection_screen/person_detection_screen_int8.uf2 /mnt/pico
-sudo sync
-```
-
-### View output
-
-The person detection screen example outputs some information through usb, you can use minicom to view:
-```bash
-minicom -b 115200 -o -D /dev/ttyACM0
-```
-![minicom_output](data/minicom_output_screen.png)
-
-The person detection screen example also outputs the image data and person detection screen results to the UART, and you can see them directly on the screen.
-![no-person](data/no_person_screen.jpg){}
-![person](data/person_screen.jpg)
+Changes are made in the peroson detection code to turn ON and OFF the LED. The LED pin in connected to 15th GPIO pin on the wiznet pico board. When the score of the preson detection is above 75% the LED will turn On or it will be OFF.
