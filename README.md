@@ -118,13 +118,7 @@ Bin|Description
 ---|---
 [person_detection_int8.uf2](tflmicro/bin/person_detection_int8.uf2) | This is the main program of person_detection, which can be dragged onto the RP2040 USB Mass Storage Device.
  
- The code in the [main_functions.cpp](tflmicro/examples/peron_detection/main_functions.cpp) edited by initializing PIN 15 as OUTPUT and controlling the LED ON and OFF depending on the person detection  score. snipet of the edited code is shown below. 
-![IMAGE ALT TEXT](data/LED_Code.PNG)
-
-Again build the binary files using the cmake commands refering the previous commands. Once the file is built you should be able to see the binary file in the build directry under the name person_detection_in8.bin.
-
-![IMAGE ALT TEXT](data/tflmicro_output.png)
-
+ 
 ### Test Person Detection
 
 App|Description
@@ -134,6 +128,14 @@ App|Description
 - Hardware connection 
 
 ![IMAGE ALT TEXT](data/wiring_diagram.png)
+
+The code in the [main_functions.cpp](tflmicro/examples/peron_detection/main_functions.cpp) edited by initializing PIN 15 as OUTPUT and controlling the LED ON and OFF depending on the person detection  score. snipet of the edited code is shown below. 
+
+![IMAGE ALT TEXT](data/LED_Code.PNG)
+
+Again build the binary files using the cmake commands refering the previous commands. Once the file is built you should be able to see the binary file in the build directry under the name person_detection_in8.bin.
+
+![IMAGE ALT TEXT](data/tflmicro_output.png)
 
 - Load and run person_detection 
 The simplest method to load software onto a RP2040-based board is by mounting it as a USB Mass Storage Device.
