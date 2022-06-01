@@ -2,14 +2,13 @@
 
 Table of contents
 =================
+[Table of contents](#table-of-contents)
+* [Getting Started](#Getting-Started)
+* [Quick Pico Setup](#Quick-Pico-Setup)
 
-   * [Table of contents](#table-of-contents)
-   * [Getting Started](#Getting-Started)
-   * [Quick Pico Setup](#Quick-Pico-Setup)
-
-   * [Person Detection](#Person-Detection)
-      * [Download and Build](#Person-Detection)
-      * [Test Person Detection](#Test-Person-Detection)
+* [Person Detection](#Person-Detection)
+   * [Download and Build](#Person-Detection)
+   * [Test Person Detection](#Test-Person-Detection)
 
 
 # Getting started
@@ -20,6 +19,7 @@ on getting up and running.
 # Quick Pico Setup
 If you are developing for Raspberry Pi Pico on the Raspberry Pi 4B, or the Raspberry Pi 400, most of the installation steps
 in this Getting Started guide can be skipped by running the setup script. You can get this script by doing the following:
+
 ```bash
 git clone https://github.com/raspberrypi/pico-setup.git
 ```
